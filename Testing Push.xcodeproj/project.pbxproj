@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4302C56182BBB206BAC55091 /* Pods_Testing_Push.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E547FFAA720B5752525C7968 /* Pods_Testing_Push.framework */; };
+		AE66A87E1EC85C830011C672 /* InstanceIdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A87D1EC85C830011C672 /* InstanceIdHandler.swift */; };
 		AEBDBC021EC4481B00FD8F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDBC011EC4481B00FD8F19 /* AppDelegate.swift */; };
 		AEBDBC041EC4481B00FD8F19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDBC031EC4481B00FD8F19 /* ViewController.swift */; };
 		AEBDBC071EC4481B00FD8F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBDBC051EC4481B00FD8F19 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		0FC2CA74C736E079042DA8DD /* Pods-Testing Push.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing Push.release.xcconfig"; path = "Pods/Target Support Files/Pods-Testing Push/Pods-Testing Push.release.xcconfig"; sourceTree = "<group>"; };
 		930957C13FDB67B63BEE772A /* Pods-Testing Push.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing Push.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Testing Push/Pods-Testing Push.debug.xcconfig"; sourceTree = "<group>"; };
 		AE66A87C1EC8535B0011C672 /* Testing Push.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Testing Push.entitlements"; sourceTree = "<group>"; };
+		AE66A87D1EC85C830011C672 /* InstanceIdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceIdHandler.swift; sourceTree = "<group>"; };
 		AEBDBBFE1EC4481B00FD8F19 /* Testing Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Testing Push.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBDBC011EC4481B00FD8F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBDBC031EC4481B00FD8F19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE66A87F1EC85C880011C672 /* FIRMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				AEBDBC151EC4677E00FD8F19 /* RemoteMessagingHandler.swift */,
+				AE66A87D1EC85C830011C672 /* InstanceIdHandler.swift */,
+			);
+			name = FIRMessaging;
+			sourceTree = "<group>";
+		};
 		AEBDBBF51EC4481B00FD8F19 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +86,7 @@
 		AEBDBC001EC4481B00FD8F19 /* Testing Push */ = {
 			isa = PBXGroup;
 			children = (
+				AE66A87F1EC85C880011C672 /* FIRMessaging */,
 				AE66A87C1EC8535B0011C672 /* Testing Push.entitlements */,
 				AEBDBC131EC44F8E00FD8F19 /* GoogleService-Info.plist */,
 				AEBDBC011EC4481B00FD8F19 /* AppDelegate.swift */,
@@ -83,7 +95,6 @@
 				AEBDBC081EC4481B00FD8F19 /* Assets.xcassets */,
 				AEBDBC0A1EC4481B00FD8F19 /* LaunchScreen.storyboard */,
 				AEBDBC0D1EC4481B00FD8F19 /* Info.plist */,
-				AEBDBC151EC4677E00FD8F19 /* RemoteMessagingHandler.swift */,
 			);
 			path = "Testing Push";
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 			files = (
 				AEBDBC041EC4481B00FD8F19 /* ViewController.swift in Sources */,
 				AEBDBC021EC4481B00FD8F19 /* AppDelegate.swift in Sources */,
+				AE66A87E1EC85C830011C672 /* InstanceIdHandler.swift in Sources */,
 				AEBDBC161EC4677E00FD8F19 /* RemoteMessagingHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
