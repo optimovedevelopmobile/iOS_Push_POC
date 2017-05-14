@@ -20,4 +20,9 @@ class InstanceIdHandler {
         }
         RemoteMessagingHandler.shared.connectToFcm()
     }
+    
+    func setToken(_ token: Data) {
+        
+        FIRInstanceID.instanceID().setAPNSToken(token, type: .sandbox)
+    }
 }

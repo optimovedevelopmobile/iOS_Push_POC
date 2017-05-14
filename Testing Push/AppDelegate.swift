@@ -29,5 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         remoteMessagingHandler.digestPushData(data)
         completionHandler(.newData)
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        InstanceIdHandler.shared.setToken(deviceToken)
+    }
 }
 

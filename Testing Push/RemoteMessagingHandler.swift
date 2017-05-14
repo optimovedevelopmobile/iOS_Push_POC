@@ -72,6 +72,7 @@ extension RemoteMessagingHandler: FIRMessagingDelegate {
     
     func digestPushData(_ data: [String: Any]) {
         
+        FIRMessaging.messaging().appDidReceiveMessage(data)
         guard let title = data["title"] as? String  else { return }
         guard let body = data["body"] as? String else { return }
         
