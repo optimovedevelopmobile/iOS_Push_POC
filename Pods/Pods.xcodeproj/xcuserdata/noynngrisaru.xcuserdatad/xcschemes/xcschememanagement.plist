@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PiwikTracker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Testing Push.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8D1A846910055B483E9856A4897504C1</key>
+		<key>0F88B29D7C90BDB8C25C9120D803CBD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E2D1FC9C2F8D6031B472183B77D7915</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F69A81822CB50B869040BD2963A40756</key>
+		<key>F7413A45D5C1F804E686D4DF9171B6A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

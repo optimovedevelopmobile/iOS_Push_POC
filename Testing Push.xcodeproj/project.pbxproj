@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4302C56182BBB206BAC55091 /* Pods_Testing_Push.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E547FFAA720B5752525C7968 /* Pods_Testing_Push.framework */; };
+		AE1446F71ECA07C400CC4B48 /* PiwikManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1446F61ECA07C400CC4B48 /* PiwikManager.swift */; };
+		AE1446FB1ECA0DB800CC4B48 /* piwiktracker.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = AE1446F81ECA0DB800CC4B48 /* piwiktracker.xcdatamodeld */; };
 		AE66A87E1EC85C830011C672 /* InstanceIdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE66A87D1EC85C830011C672 /* InstanceIdHandler.swift */; };
 		AEBDBC021EC4481B00FD8F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDBC011EC4481B00FD8F19 /* AppDelegate.swift */; };
 		AEBDBC041EC4481B00FD8F19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBDBC031EC4481B00FD8F19 /* ViewController.swift */; };
@@ -21,6 +23,9 @@
 /* Begin PBXFileReference section */
 		0FC2CA74C736E079042DA8DD /* Pods-Testing Push.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing Push.release.xcconfig"; path = "Pods/Target Support Files/Pods-Testing Push/Pods-Testing Push.release.xcconfig"; sourceTree = "<group>"; };
 		930957C13FDB67B63BEE772A /* Pods-Testing Push.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Testing Push.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Testing Push/Pods-Testing Push.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1446F61ECA07C400CC4B48 /* PiwikManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiwikManager.swift; sourceTree = "<group>"; };
+		AE1446F91ECA0DB800CC4B48 /* piwiktracker v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "piwiktracker v2.xcdatamodel"; sourceTree = "<group>"; };
+		AE1446FA1ECA0DB800CC4B48 /* piwiktracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = piwiktracker.xcdatamodel; sourceTree = "<group>"; };
 		AE66A87C1EC8535B0011C672 /* Testing Push.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Testing Push.entitlements"; sourceTree = "<group>"; };
 		AE66A87D1EC85C830011C672 /* InstanceIdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceIdHandler.swift; sourceTree = "<group>"; };
 		AEBDBBFE1EC4481B00FD8F19 /* Testing Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Testing Push.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +61,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE1446F51ECA07A400CC4B48 /* Piwik */ = {
+			isa = PBXGroup;
+			children = (
+				AE1446F61ECA07C400CC4B48 /* PiwikManager.swift */,
+			);
+			name = Piwik;
+			sourceTree = "<group>";
+		};
 		AE66A87F1EC85C880011C672 /* FIRMessaging */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +81,7 @@
 		AEBDBBF51EC4481B00FD8F19 = {
 			isa = PBXGroup;
 			children = (
+				AE1446F81ECA0DB800CC4B48 /* piwiktracker.xcdatamodeld */,
 				AEBDBC001EC4481B00FD8F19 /* Testing Push */,
 				AEBDBBFF1EC4481B00FD8F19 /* Products */,
 				037E5BB3EFCA031C77F8B537 /* Pods */,
@@ -86,6 +100,7 @@
 		AEBDBC001EC4481B00FD8F19 /* Testing Push */ = {
 			isa = PBXGroup;
 			children = (
+				AE1446F51ECA07A400CC4B48 /* Piwik */,
 				AE66A87F1EC85C880011C672 /* FIRMessaging */,
 				AE66A87C1EC8535B0011C672 /* Testing Push.entitlements */,
 				AEBDBC131EC44F8E00FD8F19 /* GoogleService-Info.plist */,
@@ -178,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1446FB1ECA0DB800CC4B48 /* piwiktracker.xcdatamodeld in Resources */,
 				AEBDBC0C1EC4481B00FD8F19 /* LaunchScreen.storyboard in Resources */,
 				AEBDBC141EC44F8E00FD8F19 /* GoogleService-Info.plist in Resources */,
 				AEBDBC091EC4481B00FD8F19 /* Assets.xcassets in Resources */,
@@ -243,6 +259,7 @@
 				AEBDBC041EC4481B00FD8F19 /* ViewController.swift in Sources */,
 				AEBDBC021EC4481B00FD8F19 /* AppDelegate.swift in Sources */,
 				AE66A87E1EC85C830011C672 /* InstanceIdHandler.swift in Sources */,
+				AE1446F71ECA07C400CC4B48 /* PiwikManager.swift in Sources */,
 				AEBDBC161EC4677E00FD8F19 /* RemoteMessagingHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +433,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE1446F81ECA0DB800CC4B48 /* piwiktracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE1446F91ECA0DB800CC4B48 /* piwiktracker v2.xcdatamodel */,
+				AE1446FA1ECA0DB800CC4B48 /* piwiktracker.xcdatamodel */,
+			);
+			currentVersion = AE1446F91ECA0DB800CC4B48 /* piwiktracker v2.xcdatamodel */;
+			name = piwiktracker.xcdatamodeld;
+			path = Pods/PiwikTracker/PiwikTracker/piwiktracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AEBDBBF61EC4481B00FD8F19 /* Project object */;
 }

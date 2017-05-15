@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0F88B29D7C90BDB8C25C9120D803CBD4'
-               BlueprintName = 'Protobuf'
+               BlueprintIdentifier = 'F7413A45D5C1F804E686D4DF9171B6A0'
+               BlueprintName = 'PiwikTracker'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Protobuf.framework'>
+               BuildableName = 'PiwikTracker.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

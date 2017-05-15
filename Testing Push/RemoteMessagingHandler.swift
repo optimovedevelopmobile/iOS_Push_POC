@@ -111,6 +111,9 @@ extension RemoteMessagingHandler: FIRMessagingDelegate {
         guard let body = payload["bodyz"] as? String else { return }
         guard let shouldShow = payload["shouldShow"] as? Bool else { return }
         
+        let message = "\(title)-\(body)"
+        PiwikManager.shared.reportEvent(name: message, category: "Push", action: "recieved", value: 0.0, force: true)
+        
         if shouldShow {
             if #available(iOS 10.0, *) {
                 showUNNotification(title: title, body: body)
@@ -118,7 +121,7 @@ extension RemoteMessagingHandler: FIRMessagingDelegate {
                 showLocalNotification(title: title, body: body)
             }
         } else {
-            UserDefaults.standard.set("\(title)-\(body)", forKey: kStoredDataKey)
+            UserDefaults.standard.set(message, forKey: kStoredDataKey)
         }
     }
     

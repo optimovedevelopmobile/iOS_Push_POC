@@ -22,11 +22,15 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - PiwikTracker (3.3.0):
+    - PiwikTracker/Core (= 3.3.0)
+  - PiwikTracker/Core (3.3.0)
   - Protobuf (3.2.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
+  - PiwikTracker
 
 SPEC CHECKSUMS:
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
@@ -35,8 +39,9 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FirebaseMessaging: df8267f378580a24174ce7861233aa11d5c90109
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  PiwikTracker: 7147287d30a3192289bef9cddb2b5342d67dae43
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
 
-PODFILE CHECKSUM: ae7d36e80385631f47f52b21fa194dbe69c1abcb
+PODFILE CHECKSUM: b8b1e0070ff0b0d1fdaf2008968409755e2ae236
 
 COCOAPODS: 1.2.1
