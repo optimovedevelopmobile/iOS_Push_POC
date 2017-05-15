@@ -2,6 +2,27 @@ import Foundation
 import UserNotifications
 import Firebase
 
+/*
+
+ In order for FCM to use silent notification that will handle all cases but force-quit (recent apps swipe) use the following format:
+ 
+ {
+ "notification": {
+ "data": {
+ "titlez":"All tomatoes",
+ "bodyz":"I'm important notification",
+ "shouldShow": true
+ },
+ "content_available": true,
+ "priority": "high"
+ },
+ "to": "d9LWzDWRC1M:APA91bE6Fm7VAE9YdjqHf3VZjfZ2M8RUl4t4e1QjGdp3RDX5MXUxZ9AIXOhr5cFZ4JRQI9b91hdYlrGCCzfO2VFZ-QjX4Ig2oOlSxGJD4dCdrLZudUfVZhN8AquVEijIaUDEtJsoRMSW"
+ }
+ 
+ ALSO!!! don't forget to enable both PushKit and background remote notifications mode
+ 
+*/
+
 let kStoredDataKey = "stored_data"
 
 class RemoteMessagingHandler: NSObject {
