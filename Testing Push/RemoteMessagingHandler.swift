@@ -2,6 +2,8 @@ import Foundation
 import UserNotifications
 import Firebase
 
+let kStoredDataKey = "stored_data"
+
 class RemoteMessagingHandler: NSObject {
     
     static let shared = RemoteMessagingHandler()
@@ -72,14 +74,30 @@ extension RemoteMessagingHandler: FIRMessagingDelegate {
     
     func digestPushData(_ data: [String: Any]) {
         
-        FIRMessaging.messaging().appDidReceiveMessage(data)
-        guard let title = data["title"] as? String  else { return }
-        guard let body = data["body"] as? String else { return }
+        func getPayload() -> [String: Any]? {
+            
+            let payloadRawString = data["gcm.notification.data"] as? String
+            guard let payloadRawData = payloadRawString?.data(using: .utf8) else {
+                return nil
+            }
+            let payload = try? JSONSerialization.jsonObject(with: payloadRawData, options: .allowFragments)
+            return payload as? [String: Any]
+        }
         
-        if #available(iOS 10.0, *) {
-            showUNNotification(title: title, body: body)
+        guard let payload = getPayload() else { return }
+        FIRMessaging.messaging().appDidReceiveMessage(data)
+        guard let title = payload["titlez"] as? String  else { return }
+        guard let body = payload["bodyz"] as? String else { return }
+        guard let shouldShow = payload["shouldShow"] as? Bool else { return }
+        
+        if shouldShow {
+            if #available(iOS 10.0, *) {
+                showUNNotification(title: title, body: body)
+            } else {
+                showLocalNotification(title: title, body: body)
+            }
         } else {
-            showLocalNotification(title: title, body: body)
+            UserDefaults.standard.set("\(title)-\(body)", forKey: kStoredDataKey)
         }
     }
     

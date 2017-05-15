@@ -1,25 +1,17 @@
-//
-//  ViewController.swift
-//  Testing Push
-//
-//  Created by Noy Nanthan Grisaru on 11/05/2017.
-//  Copyright © 2017 Noy. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var outputLabel: UILabel!
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var output = "No data stored yet"
+        if let storedData = UserDefaults.standard.value(forKey: kStoredDataKey) as? String {
+            output = storedData
+        }
+        outputLabel.text = output
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
